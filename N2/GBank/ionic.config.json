@@ -1,7 +1,0 @@
-{
-  "name": "GBank",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
