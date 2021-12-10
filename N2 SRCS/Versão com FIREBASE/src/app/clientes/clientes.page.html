@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" ion-float-right>
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button (click)="addCli()">Adicionar Cliente</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let cliente of cliente" click="abrirUser(cliente)">
+      <ion-label>
+        <h2>Nome: {{cliente.nome}}</h2><h2>Email: {{cliente.email}}</h2>
+        <ion-button expand="block" color="success" >Atualizar usuario</ion-button>
+        <ion-button expand="block" color="success" (click)="deleteUser(getUser())">Deletar usuario</ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

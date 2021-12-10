@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "disp-moveis-dd3c3": {
+      "hosting": {
+        "app": [
+          "disp-moveis-dd3c3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "disp-moveis-dd3c3"
+  }
+}

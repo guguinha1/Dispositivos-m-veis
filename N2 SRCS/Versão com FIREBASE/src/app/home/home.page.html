@@ -1,0 +1,85 @@
+<ion-header class="ion-no-border">
+  <!--  -->
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start" ion-float-right>
+    <ion-menu-button menu="main-menu"></ion-menu-button>
+  </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img src="/assets/logo.png"><br>
+      <span>Bem vindo, João</span>
+    </ion-title>
+  
+</ion-toolbar>
+  <!--  -->
+</ion-header>
+
+<ion-content class="ion-padding" color="primary">
+  <div #blocks class="blocks">
+    <ion-card>
+      <ion-item class="ion-margin-vertical" lines="none">
+        <ion-icon slot="start" name="card-outline"></ion-icon>
+        <ion-label>Cartão de crédito</ion-label>
+      </ion-item>
+
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vertical cash">
+          <span class="blue">Fatura atual</span>
+          <span class="blue value">R$ {{fatura}}.00 </span>
+          <span>Limite disponível <span class="green">R$ {{limite}}.00</span></span>
+        </div>
+
+        <div class="ion-padding-vertical footer">
+          <ion-item color="light" lines="none" detail>
+            <ion-icon slot="start" name="pizza-outline"></ion-icon>
+            <ion-label class="ion-text-wrap"> Compra mais recente no Ifood no valor de R$ 54,00 </ion-label>
+          </ion-item>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item class="ion-margin-vertical" lines="none">
+        <ion-icon slot="start" name="cash-outline"></ion-icon>
+        <ion-label>Conta</ion-label>
+        <ion-button color="dark" fill="clear" slot="end">
+          <ion-icon slot="icon-only" name="eye-off-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vertical cash">
+          <span>Saldo disponível</span>
+          <ion-text color="dark">
+            <span class="value">R$ {{saldo}}.00</span>
+          </ion-text>
+        </div>
+
+        <div class="ion-padding-vertical footer">
+          <ion-item color="light" lines="none" detail>
+            <ion-icon slot="start" name="barcode-outline"></ion-icon>
+            <ion-label class="ion-text-wrap"> Pagar boleto </ion-label>
+          </ion-item>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-margin ion-padding-vertical" color="primary">
+    <div class="container ion-text-left">
+
+      <ion-button (click)='pagarFatura()' size="small">
+        <ion-icon slot="icon-only" name='wallet-outline'></ion-icon>
+        <span> Pagar fatura</span>
+      </ion-button>
+
+      <ion-button routerLink="/about">
+        <ion-icon slot="icon-only" name='information-circle-outline'></ion-icon>
+        <span> Sobre nós </span>
+      </ion-button>
+    </div>
+
+  </ion-toolbar>
+</ion-footer>
